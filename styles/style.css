@@ -121,6 +121,57 @@ nav a:hover::before {
   height: auto;
 }
 
+/* features section styles */
+.features {
+  margin-top: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 61px;
+}
+
+.features_team {
+  flex-basis: 48%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.features_team img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.features_content {
+  flex-basis: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.features_content .primary-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.features_content .title {
+  color: #727272;
+  font-family: Work Sans;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.features_content .bold_text {
+  color: #131313;
+  font-weight: 700;
+}
+.features_content .orange_text {
+  font-weight: 700;
+  color: #ff900e;
+}
+
 /* responsive for tablet */
 @media only screen and (max-width: 960px) {
   .container {
@@ -137,7 +188,16 @@ nav a:hover::before {
     font-size: 2.7rem;
     margin-bottom: 12px;
   }
+  .features {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    /* padding: 0 20px; */
+  }
+  .features_content .title {
+    font-size: 37px;
+  }
 }
+
 /* responsive for mobile */
 
 @media only screen and (max-width: 576px) {
@@ -161,7 +221,26 @@ nav a:hover::before {
     margin-bottom: 10px;
   }
   .banner .primary-btn {
-    padding: 16px 26px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .features {
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 40px;
+  }
+  .features_content .title {
+    font-size: 30px;
+  }
+
+  .features_team {
+    grid-template-columns: 1fr;
+    gap: 12px 0;
+  }
+  .features_content .primary-btn {
+    padding: 14px 20px;
+    font-size: 16px;
     font-weight: 500;
   }
 }
