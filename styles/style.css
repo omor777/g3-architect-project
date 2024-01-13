@@ -364,6 +364,22 @@ nav a:hover::before {
   grid-template-columns: repeat(5, 1fr);
   column-gap: 154px;
 }
+/* footer section */
+
+footer > div {
+  margin-top: 130px;
+  border-radius: 8px;
+  background: #fff4e7;
+  padding: 40px 0;
+}
+
+footer p {
+  color: #424242;
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 20px;
+  font-weight: 400;
+}
 
 /* responsive for tablet */
 @media only screen and (max-width: 960px) {
@@ -537,6 +553,7 @@ nav a:hover::before {
   }
   .stats_card {
     width: 100%;
+    padding: 2rem;
   }
 
   .sponsors_img_container {
@@ -559,6 +576,13 @@ nav a:hover::before {
   .stats {
     margin-top: 6.25rem;
   }
-}
 
+  footer > div {
+    margin-top: 80px;
+  }
+
+  footer p {
+    font-size : 14px;
+  }
+}
 
