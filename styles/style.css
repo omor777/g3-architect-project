@@ -8,7 +8,9 @@
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
 }
-
+.hide {
+  display: none !important;
+}
 /* shared styles */
 .container {
   width: 76%;
@@ -172,6 +174,106 @@ nav a:hover::before {
   color: #ff900e;
 }
 
+.what_i_do {
+  margin-top: 130px;
+}
+
+/* what i do section */
+.what_i_do {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* border: 1px solid red; */
+}
+
+.what_i_do_content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 586px;
+}
+
+.what_i_do_content .title {
+  max-width: 468px;
+  color: #131313;
+  font-family: Work Sans;
+  font-size: 45px;
+  font-weight: 700;
+  border-left: 5px solid #ff900e;
+  padding-left: 21px;
+  margin-top: 15px;
+}
+.what_i_do_content .desc {
+  color: #727272;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.what_i_do_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cards_container {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cards_container .card {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  padding: 30px 42px 30px 30px;
+}
+.what_i_do_content .card_title {
+  color: #131313;
+  font-family: Work Sans;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.what_i_do_content .card_desc {
+  max-width: 514px;
+  color: #727272;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.what_i_do_img .badge {
+  padding: 46px 42px;
+  border-radius: 8px;
+  background: #ff900e;
+  width: fit-content;
+  position: absolute;
+  bottom: -65px;
+  left: -92px;
+
+}
+
+.badge_exp {
+  color: #fff;
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 70px;
+}
+
+.badge_title {
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+}
+
 /* responsive for tablet */
 @media only screen and (max-width: 960px) {
   .container {
@@ -195,6 +297,41 @@ nav a:hover::before {
   }
   .features_content .title {
     font-size: 37px;
+  }
+
+  .what_i_do {
+    grid-template-columns: 1fr;
+    row-gap: 7rem;
+  }
+
+  .what_i_do_content {
+    max-width: 100%;
+  }
+
+  .cards_container {
+    justify-content: center;
+  }
+
+  .what_i_do_content .title {
+    font-size: 32px;
+  }
+
+  .what_i_do_img {
+    order: -1;
+  }
+  .what_i_do_img img {
+    width: 100%;
+  }
+
+  .what_i_do_img .badge {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 28px 26px;
+
+  }
+  .badge_exp {
+    font-size: 45px;
+    line-height: normal;
   }
 }
 
@@ -242,5 +379,32 @@ nav a:hover::before {
     padding: 14px 20px;
     font-size: 16px;
     font-weight: 500;
+  }
+  /* what i do */
+  .what_i_do {
+    grid-template-columns: 1fr;
+    row-gap: 7rem;
+  }
+  .what_i_do_content .title {
+    font-size: 25px;
+    padding-left: 12px;
+  }
+  .what_i_do_img {
+    order: -1;
+  }
+
+  .badge_exp {
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .what_i_do_img .badge {
+    padding: 20px 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+  .badge_title {
+    font-size: 22px;
   }
 }
