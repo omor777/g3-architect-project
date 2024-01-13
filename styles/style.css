@@ -274,6 +274,9 @@ nav a:hover::before {
 }
 
 /* stats section */
+.stats {
+  margin-top: 168px;
+}
 
 .stats_content {
   margin-bottom: 100px;
@@ -326,6 +329,42 @@ nav a:hover::before {
   display: block;
   margin: 0 auto 10px;
 }
+/* sponsors section */
+
+.sponsors {
+  margin-top: 180px;
+}
+
+.sponsors_content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.sponsors_title {
+  color: #131313;
+  font-family: Work Sans;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.sponsors_desc {
+  max-width: 542px;
+  color: #727272;
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.sponsors_img_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 154px;
+}
+
 /* responsive for tablet */
 @media only screen and (max-width: 960px) {
   .container {
@@ -392,6 +431,22 @@ nav a:hover::before {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 0;
+  }
+
+  .sponsors_img_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 80px;
+  }
+
+  .sponsors_img_container > div {
+    align-self: center;
+  }
+
+  .sponsors_img_container img {
+    width: 100%;
+  }
+  .sponsors {
+    margin-top: 120px;
   }
 }
 
@@ -483,4 +538,27 @@ nav a:hover::before {
   .stats_card {
     width: 100%;
   }
+
+  .sponsors_img_container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4rem;
+  }
+
+  .sponsors_img_container img {
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sponsors_title {
+    font-size: 35px;
+  }
+  .sponsors {
+    margin-top: 6.25rem;
+  }
+  .stats {
+    margin-top: 6.25rem;
+  }
 }
+
+
